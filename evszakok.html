@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="evszak()">Evszakvalaszto</button>
+    <div id="eredmeny"></div>
+    <script>
+        function evszak() {
+            var randomszam = Math.floor(Math.random() * 14)+1;
+            console.log(randomszam);
+            switch( randomszam) {
+                case 3:
+                case 4:
+                case 5 : eredmeny.textContent = `${randomszam}. honap tavasz`;break;
+                case 6:
+                case 7:
+                case 8 : eredmeny.textContent = `${randomszam}. honap nyár`;break;
+                case 9:
+                case 10:
+                case 11 : eredmeny.textContent = `${randomszam}. honap ősz`;break;
+                case 12:
+                case 1:
+                case 2 : eredmeny.textContent = `${randomszam}. honap tél`;break;
+                default :  eredmeny.textContent = "Nincs ilyen honap";
+            }
+
+        }
+
+    </script>
+</body>
+</html>
